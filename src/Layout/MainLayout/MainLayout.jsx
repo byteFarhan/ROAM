@@ -4,7 +4,7 @@ const MainLayout = () => {
   return (
     <section>
       <div>
-        <p>
+        <p className="text-3xl font-bold text-red-600">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
           reiciendis ut repudiandae odio ipsa? Consequatur minus facilis fugiat
           incidunt dolorum, voluptatem nemo voluptates quasi unde consectetur,
