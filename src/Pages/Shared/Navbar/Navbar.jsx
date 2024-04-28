@@ -1,4 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
+import useTheme from "../../../hooks/useTheme";
+import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 // import logo from "../../../assets/logo.png";
 // import avtr from "../../../assets/house-logo.png";
 // import useAuth from "../../../hooks/useAuth";
@@ -6,6 +8,7 @@ import { Link, NavLink } from "react-router-dom";
 // import swal from "sweetalert";
 
 const Navbar = () => {
+  const { changeTheme, mode } = useTheme();
   const user = true;
   // const { user, userSignOut } = useAuth();
   // const handleLogout = () => {
@@ -70,7 +73,7 @@ const Navbar = () => {
   );
   return (
     <>
-      <nav className="bg-[#f9f9f9]">
+      <nav className="bg-[#f9f9f9] dark:bg-[#1C1C1C]">
         <div className="drawer">
           <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
           <div className="flex flex-col drawer-content">
@@ -101,7 +104,11 @@ const Navbar = () => {
                 {/* <img src={logo} alt="" className="h-10 md:h-auto" /> */}
                 <h1 className="text-4xl font-bold text-primary">ROAM</h1>
               </Link>
-
+              <div onClick={changeTheme} className="">
+                <p className="text-2xl md:text-3xl font-medium text-primary">
+                  {mode === "light" ? <MdDarkMode /> : <MdOutlineLightMode />}
+                </p>
+              </div>
               <div className="flex-1 hidden lg:justify-center lg:flex">
                 <ul className="menu menu-horizontal">
                   {/* Navbar menu content here */}
