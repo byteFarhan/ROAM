@@ -70,7 +70,7 @@ const Navbar = () => {
   );
   return (
     <>
-      <nav className="bg-[#1C1C1C]">
+      <nav className="bg-[#f9f9f9]">
         <div className="drawer">
           <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
           <div className="flex flex-col drawer-content">
@@ -99,7 +99,7 @@ const Navbar = () => {
               </div>
               <Link to={"/"} className="px-2 mx-2">
                 {/* <img src={logo} alt="" className="h-10 md:h-auto" /> */}
-                <h1 className="text-4xl font-bold text-red-600">ROAM</h1>
+                <h1 className="text-4xl font-bold text-primary">ROAM</h1>
               </Link>
 
               <div className="flex-1 hidden lg:justify-center lg:flex">
