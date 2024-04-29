@@ -51,12 +51,12 @@ const Navbar = () => {
       </li>
       <li className={`${user ? "" : "hidden"}`}>
         <NavLink
-          to={"/update-profile"}
+          to={"/add_tourist_spot"}
           className={({ isActive }) =>
             isActive ? "*:underline *:text-primary *:font-medium" : "text-white"
           }
         >
-          <p className="text-primary">Update Profile</p>
+          <p className="text-primary">AddTouristsSpot</p>
         </NavLink>
       </li>
       <li className={`${user ? "hidden" : ""}`}>
@@ -105,7 +105,7 @@ const Navbar = () => {
                 <h1 className="text-4xl font-bold text-primary">ROAM</h1>
               </Link>
               <div onClick={changeTheme} className="">
-                <p className="text-2xl md:text-3xl font-medium text-primary">
+                <p className="text-2xl font-medium md:text-3xl text-primary">
                   {mode === "light" ? <MdDarkMode /> : <MdOutlineLightMode />}
                 </p>
               </div>

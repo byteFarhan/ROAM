@@ -14,20 +14,20 @@ const TouristSpotDetails = () => {
 
   const {
     image,
-    tourists_spot_name,
+    touristsSpotName,
     description,
-    average_cost,
-    travel_time,
+    cost,
+    travelTime,
     age,
     rating,
-    country_Name,
+    countryName,
     location,
     seasonality,
     totalVisitorsPerYear,
-    Departure,
-    Included,
-    "not-included": notIncluded,
-    "Departure Time": departureTime,
+    departure,
+    included,
+    notIncluded,
+    departureTime,
   } = touristSpot;
   //   console.log(Departure);
   return (
@@ -38,7 +38,7 @@ const TouristSpotDetails = () => {
       >
         <div className="">
           <h2 className="text-5xl lg:text-[90px] font-bold text-center text-white">
-            {tourists_spot_name}
+            {touristsSpotName}
           </h2>
           <img src={separator} alt="" className="mx-auto" draggable="false" />
           {/* <div className="px-5 py-10">
@@ -59,17 +59,17 @@ const TouristSpotDetails = () => {
         <div className="px-5 lg:col-span-3 lg:px-0">
           <div className="space-y-2">
             <h3 className="text-3xl font-bold lg:text-4xl text-title">
-              {tourists_spot_name}
+              {touristsSpotName}
             </h3>
             <h5 className="text-xl italic font-bold font-playfair-display text-primary">
-              {average_cost}/Per Person
+              {cost}/Per Person
             </h5>
           </div>
           <p className="my-6 text-natural">{description}</p>
           <div className="*:flex *:gap-2 *:capitalize *:items-center *:font-medium *:lg:text-lg flex gap-10">
             <p>
               <MdOutlineAccessTime />
-              {travel_time}
+              {travelTime}
             </p>
             <p>
               <BsFillPersonVcardFill />
@@ -86,7 +86,7 @@ const TouristSpotDetails = () => {
                 <p className="text-lg font-bold text-title w-[40%]">
                   Destination
                 </p>
-                <p className="capitalize">{tourists_spot_name}</p>
+                <p className="capitalize">{touristsSpotName}</p>
               </li>
               <li className="transition-all duration-100 hover:bg-gray">
                 <p className="text-lg font-bold text-title md:w-[40%]">
@@ -98,7 +98,7 @@ const TouristSpotDetails = () => {
                 <p className="text-lg font-bold text-title md:w-[40%]">
                   Departure Location
                 </p>
-                <p className="capitalize">{Departure}</p>
+                <p className="capitalize">{departure}</p>
               </li>
               <li className="transition-all duration-100 hover:bg-gray">
                 <p className="text-lg font-bold text-title md:w-[40%]">
@@ -111,7 +111,7 @@ const TouristSpotDetails = () => {
                   Included
                 </p>
                 <div className="flex flex-wrap gap-3 capitalize md:gap-5">
-                  {Included?.map((item) => (
+                  {included?.map((item) => (
                     <p key={item} className="flex gap-1.5 items-center">
                       <span className="text-primary">
                         <IoCheckmarkDoneOutline />

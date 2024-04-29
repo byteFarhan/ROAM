@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SectionIntro from "../../Shared/Navbar/SectionIntro/SectionIntro";
+import SectionIntro from "../../Shared/SectionIntro/SectionIntro";
 import { useEffect } from "react";
 import TouristSpot from "./TouristSpot/TouristSpot";
 

@@ -1,15 +1,14 @@
 import PropTypes from "prop-types";
 import { BsFillPersonVcardFill } from "react-icons/bs";
-import { IoIosTimer } from "react-icons/io";
 import { MdOutlineAccessTime } from "react-icons/md";
 import { Link } from "react-router-dom";
 const TouristSpot = ({ touristSpot }) => {
   const {
     image,
-    tourists_spot_name,
+    touristsSpotName,
     description,
-    average_cost,
-    travel_time,
+    cost,
+    travelTime,
     age,
     rating,
     _id,
@@ -20,7 +19,7 @@ const TouristSpot = ({ touristSpot }) => {
         <figure>
           <img
             src={image}
-            alt={tourists_spot_name}
+            alt={touristsSpotName}
             className="h-[500px] lg:h-[500px] w-auto object-cover"
           />
         </figure>
@@ -29,9 +28,9 @@ const TouristSpot = ({ touristSpot }) => {
         <div className="p-6">
           <div className="flex items-start justify-between">
             <h3 className="text-2xl font-bold transition-all duration-100 text-title dark:text-title-d hover:text-primary">
-              <Link to={`/tourist_spots/${_id}`}>{tourists_spot_name}</Link>
+              <Link to={`/tourist_spots/${_id}`}>{touristsSpotName}</Link>
             </h3>
-            <h5 className="text-xl font-bold text-primary">{average_cost}</h5>
+            <h5 className="text-xl font-bold text-primary">{cost}</h5>
           </div>
           <p className="mt-1 text-natural dark:text-natural-d">
             {rating} Superb
@@ -45,7 +44,7 @@ const TouristSpot = ({ touristSpot }) => {
       <div className="flex gap-10 px-6 py-4 font-medium *:text-white bg-primary">
         <p className="flex items-center gap-2">
           <MdOutlineAccessTime />
-          {travel_time}
+          {travelTime}
         </p>
         <p className="flex items-center gap-2">
           <BsFillPersonVcardFill />
