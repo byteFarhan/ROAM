@@ -8,9 +8,9 @@ import { FaHeart } from "react-icons/fa";
 
 const TouristSpotDetails = () => {
   const touristSpot = useLoaderData();
-  console.log(touristSpot);
-  const id = useParams();
-  console.log(id);
+  // console.log(touristSpot);
+  // const id = useParams();
+  // console.log(id);
 
   const {
     image,
