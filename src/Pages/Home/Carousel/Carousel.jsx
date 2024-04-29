@@ -15,12 +15,11 @@ const Carousel = () => {
   const settings = {
     // dots: true,
     infinite: true,
-    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    // speed: 2000,
+    speed: 1000,
     autoplaySpeed: 5000,
   };
   const prevSlide = () => {
@@ -56,15 +55,13 @@ const Carousel = () => {
             />
             <Slide
               slideImg={sliderImg2}
-              title={`Seaside Retreat Haven`}
-              subTitle={`Experience Serenity by the Shore`}
-              description={`Discover the ultimate seaside sanctuary at our retreat haven. Let the soothing sound of waves and the gentle ocean breeze whisk away your worries.`}
+              title={`Adventure Awaits`}
+              description={`Satisfy your wanderlust with our tailor-made experiences. From mountain treks to island retreats, let's craft your perfect journey!`}
             />
             <Slide
               slideImg={sliderImg3}
-              title={`Mountain Chalet Escape`}
-              subTitle={`Embrace Adventure in Nature's Lap`}
-              description={`Embark on a journey to our mountain chalet escape, where adventure and relaxation intertwine. Surrounded by breathtaking views, every moment becomes an exhilarating experience.`}
+              title={`Rejuvenate Your Soul`}
+              description={`Discover tranquility in our serene escapes. From luxury spas to secluded hideaways, find your slice of paradise and unwind.`}
             />
             {/* <CarouselSlide />
             <CarouselSlide /> */}
