@@ -13,7 +13,8 @@
     "Departure": "Bangkok",
     "Departure Time": "8:30 AM",
     "Included": ["Accommodation", "Island Hopping Tours"],
-    "not-included": ["Meals", "Alcoholic Beverages"]
+    "not-included": ["Meals", "Alcoholic Beverages"],
+    "rating": 9.8
   },
   {
     "image": "https://i.postimg.cc/2jhSqCXf/Ha-Long-Bay.jpg",
@@ -29,7 +30,8 @@
     "Departure": "Hanoi",
     "Departure Time": "7:30 AM",
     "Included": ["Cruise Accommodation", "Meals"],
-    "not-included": ["Airfare", "Excursions"]
+    "not-included": ["Airfare", "Excursions"],
+    "rating": 9.0
   },
   {
     "image": "https://i.postimg.cc/3JjNq3gZ/Taj-Mahal.jpg",
@@ -45,7 +47,8 @@
     "Departure": "New Delhi",
     "Departure Time": "6:00 AM",
     "Included": ["Accommodation", "Transportation"],
-    "not-included": ["Meals", "Entrance Fees"]
+    "not-included": ["Meals", "Entrance Fees"],
+    "rating": 7.5
   },
   {
     "image": "https://i.postimg.cc/k4NLmYwL/Angkor-Wat.jpg",
@@ -61,7 +64,8 @@
     "Departure": "Phnom Penh",
     "Departure Time": "8:00 AM",
     "Included": ["Accommodation", "Guided Tours"],
-    "not-included": ["Airfare", "Meals"]
+    "not-included": ["Airfare", "Meals"],
+    "rating": 8.5
   },
 
   {
@@ -78,7 +82,8 @@
     "Departure": "Penang",
     "Departure Time": "9:00 AM",
     "Included": ["Skybridge Tour", "Transportation"],
-    "not-included": ["Meals", "Souvenirs"]
+    "not-included": ["Meals", "Souvenirs"],
+    "rating": 8.0
   },
   {
     "image": "https://i.postimg.cc/XvqvXFt2/Sundarban3.jpg",
@@ -94,6 +99,7 @@
     "Departure": "Dhaka",
     "Departure Time": "7:00 AM",
     "Included": ["Accommodation", "Boat Tours"],
-    "not-included": ["Meals", "Personal Expenses"]
+    "not-included": ["Meals", "Personal Expenses"],
+    "rating": 7.8
   }
 ]

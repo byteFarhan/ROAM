@@ -1,6 +1,6 @@
 const SectionIntro = ({ subTitle, title, description }) => {
   return (
-    <div className="mx-auto mb-8 text-center lg:w-2/5 lg:mb-12">
+    <div className="mx-auto mb-8 text-center lg:w-3/5 lg:mb-12">
       <h5 className="text-lg italic font-bold lg:text-xl font-playfair-display text-primary">
         {subTitle}
       </h5>
