@@ -4,16 +4,13 @@ import HomePage from "../Pages/Home/HomePage/HomePage";
 import TouristSpotDetails from "../Pages/TouristSpotDetails/TouristSpotDetails";
 import AddTouristsSpot from "../Pages/AddTouristsSpot/AddTouristsSpot";
 import AllTouristSpot from "../Pages/AllTouristSpot/AllTouristSpot";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
-    errorElement: (
-      <div>
-        <p>404 Page</p>
-      </div>
-    ),
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
