@@ -139,7 +139,9 @@ const TouristSpotDetails = () => {
             </ul>
           </div>
         </div>
-        <div className="border-2 lg:col-span-1 border-title"></div>
+        <div className="lg:col-span-1-title">
+          <div className="lg:h-[80vh]  border-title border-2 "></div>
+        </div>
       </div>
     </section>
   );
