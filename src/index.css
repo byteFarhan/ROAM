@@ -16,11 +16,14 @@
   h6 {
     @apply text-title;
   }
+  button {
+    @apply text-white;
+  }
 }
 
 @layer components {
   .btn-base {
-    @apply px-4 py-3 font-bold text-white capitalize border-none md:px-6 lg:py-4;
+    @apply px-4 py-3 font-bold capitalize border-none md:px-6 lg:py-4;
   }
   /* .btn-primary {
     @apply bg-primary;

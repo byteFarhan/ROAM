@@ -1,4 +1,5 @@
 import Carousel from "../Carousel/Carousel";
+import DiscountSection from "../DiscountSection/DiscountSection";
 import TouristSpots from "../TouristSpots/TouristSpots";
 
 const HomePage = () => {
@@ -6,6 +7,7 @@ const HomePage = () => {
     <section>
       <Carousel />
       <TouristSpots />
+      <DiscountSection />
     </section>
   );
 };

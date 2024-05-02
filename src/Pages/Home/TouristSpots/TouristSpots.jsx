@@ -32,7 +32,7 @@ const TouristSpots = () => {
               ))}
         </div>
       </div>
-      <div className="my-8 text-center lg:my-10">
+      <div className="mt-8 text-center lg:mt-10">
         <Link to={`/all_spots`} onClick={() => scrollTo(0, 0)}>
           <button className="btn-base bg-title">View All Spots</button>
         </Link>
