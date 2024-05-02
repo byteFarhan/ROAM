@@ -25,6 +25,9 @@
   /* .btn-primary {
     @apply bg-primary;
   } */
+  .scroll-bar {
+    @apply overflow-auto scrollbar-w-10 scrollbar-track-gray-100 scrollbar-thumb-gray-500 scrollbar-thumb-rounded-full;
+  }
 }
 * {
   scroll-behavior: smooth;
@@ -34,7 +37,7 @@
 
 /* For WebKit (Safari, Chrome) */
 ::-webkit-scrollbar {
-  width: 8px; /* width of the scrollbar */
+  width: 0.5rem; /* width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {

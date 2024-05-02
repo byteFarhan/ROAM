@@ -34,15 +34,15 @@ const Carousel = () => {
         <div className="absolute z-10 flex justify-between w-full px-5 lg:px-10 top-1/2">
           <div
             onClick={prevSlide}
-            className="p-3 md:p-5 bg-white rounded-full cursor-pointer hover:bg-primary *:hover:text-white transition-all duration-75"
+            className="p-3 md:p-5 bg-white rounded-full cursor-pointer hover:bg-primary *:hover:text-white transition-all duration-75 ease-in"
           >
-            <GrPrevious className="text-xl md:text-2xl font-semibold text-primary" />
+            <GrPrevious className="text-xl font-semibold md:text-2xl text-primary" />
           </div>
           <div
             onClick={nextSlide}
-            className="p-3 md:p-5 bg-white rounded-full cursor-pointer hover:bg-primary *:hover:text-white transition-all duration-75"
+            className="p-3 md:p-5 bg-white rounded-full cursor-pointer hover:bg-primary *:hover:text-white transition-all duration-75 ease-in"
           >
-            <GrNext className="text-xl md:text-2xl font-semibold text-primary" />
+            <GrNext className="text-xl font-semibold md:text-2xl text-primary" />
           </div>
         </div>
 
