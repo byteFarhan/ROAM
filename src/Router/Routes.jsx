@@ -23,13 +23,13 @@ const router = createBrowserRouter([
           return fetch(`http://localhost:5000/tourist_spots/${params.id}`);
         },
       },
-      {
-        path: "/spots/:id",
-        element: <TouristSpotDetails />,
-        loader: ({ params }) => {
-          return fetch(`http://localhost:5000/all_spots/${params.id}`);
-        },
-      },
+      // {
+      //   path: "/spots/:id",
+      //   element: <TouristSpotDetails />,
+      //   loader: ({ params }) => {
+      //     return fetch(`http://localhost:5000/all_spots/${params.id}`);
+      //   },
+      // },
       {
         path: "/add_spot",
         element: <AddTouristsSpot />,
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: "/all_spots",
         element: <AllTouristSpot />,
-        loader: () => fetch("http://localhost:5000/all_spots/"),
+        loader: () => fetch("http://localhost:5000/tourist_spots/"),
       },
     ],
   },

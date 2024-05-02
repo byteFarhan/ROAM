@@ -17,7 +17,7 @@ const Slide = ({ slideImg, title, description }) => {
             <p className="text-xl text-[#D9F1Fa] lg:text-3xl font-playfair-display font-semibold">
               {description}
             </p>
-            <button className="btn-base btn-primary">Spacial Offer</button>
+            <button className="btn-base bg-primary">Spacial Offer</button>
           </div>
         </div>
       </div>

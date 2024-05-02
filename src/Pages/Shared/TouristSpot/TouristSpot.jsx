@@ -20,7 +20,7 @@ const TouristSpot = ({ touristSpot }) => {
           <img
             src={image}
             alt={touristsSpotName}
-            className="h-[500px] lg:h-[500px] w-auto object-cover"
+            className="h-[450px] lg:h-[500px] w-auto object-cover"
           />
         </figure>
       </Link>
@@ -43,7 +43,7 @@ const TouristSpot = ({ touristSpot }) => {
         </div>
       </div>
 
-      <div className="flex gap-10 px-6 py-4 font-medium *:text-white bg-primary">
+      <div className="flex gap-6 lg:gap-10 px-6 py-4 font-medium *:text-white bg-primary">
         <p className="flex items-center gap-2">
           <MdOutlineAccessTime />
           {travelTime}

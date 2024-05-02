@@ -14,10 +14,10 @@ const TouristSpotB = ({ theSpot }) => {
     _id,
   } = theSpot;
   return (
-    <div className="flex gap-5 bg-white">
-      <div className="w-2/5">
+    <div className="flex flex-col gap-5 md:bg-white md:flex-row bg-[#f8f8f8]">
+      <div className="w-full md:w-2/5">
         <Link
-          to={`/spots/${_id}`}
+          to={`/tourist_spots/${_id}`}
           onClick={() => scrollTo(0, 0)}
           className="h-full"
         >
@@ -25,17 +25,17 @@ const TouristSpotB = ({ theSpot }) => {
           <img
             src={image}
             alt={touristsSpotName}
-            className="object-cover w-full h-full"
+            className="object-cover size-full"
           />
           {/* </figure> */}
         </Link>
       </div>
 
-      <div className="w-3/5">
-        <div className="">
-          <div className="flex items-start justify-between">
+      <div className="w-full md:w-3/5">
+        <div className="px-5 md:px-0">
+          <div className="flex flex-col items-start justify-between md:flex-row">
             <h3 className="text-2xl font-bold transition-all duration-100 text-title hover:text-primary">
-              <Link to={`/spots/${_id}`} onClick={() => scrollTo(0, 0)}>
+              <Link to={`/tourist_spots/${_id}`} onClick={() => scrollTo(0, 0)}>
                 {touristsSpotName}
               </Link>
             </h3>
@@ -70,7 +70,7 @@ const TouristSpotB = ({ theSpot }) => {
             <BsFillPersonVcardFill />
             {age}+
           </p>
-          <Link to={`/spots/${_id}`} onClick={() => scrollTo(0, 0)}>
+          <Link to={`/tourist_spots/${_id}`} onClick={() => scrollTo(0, 0)}>
             <button className="font-bold">View Details</button>
           </Link>
         </div>

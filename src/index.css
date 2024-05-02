@@ -6,7 +6,7 @@
 
 @layer base {
   p {
-    @apply text-natural leading-normal;
+    @apply leading-normal text-natural;
   }
   h1,
   h2,
@@ -19,7 +19,30 @@
 }
 
 @layer components {
-  .btn-primary {
-    @apply px-4 py-3 font-bold text-white capitalize border-none bg-primary md:px-6 lg:py-4;
+  .btn-base {
+    @apply px-4 py-3 font-bold text-white capitalize border-none md:px-6 lg:py-4;
   }
+  /* .btn-primary {
+    @apply bg-primary;
+  } */
+}
+* {
+  scroll-behavior: smooth;
+  /* scrollbar-width: 5px;
+  scrollbar-color: blue; */
+}
+
+/* For WebKit (Safari, Chrome) */
+::-webkit-scrollbar {
+  width: 8px; /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* color of the track */
+  /* background: #f1f1f1; */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff681a; /* color of the scrollbar */
+  border-radius: 999px;
 }

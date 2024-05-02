@@ -2,9 +2,10 @@ import { useState } from "react";
 import SectionIntro from "../../Shared/SectionIntro/SectionIntro";
 import { useEffect } from "react";
 import TouristSpot from "../../Shared/TouristSpot/TouristSpot";
+import { Link } from "react-router-dom";
 
 const TouristSpots = () => {
-  const [touristSpots, setTouristSpots] = useState([]);
+  const [touristSpots, setTouristSpots] = useState(null);
   useEffect(() => {
     fetch("http://localhost:5000/tourist_spots")
       .then((res) => res.json())
@@ -24,10 +25,17 @@ const TouristSpots = () => {
         />
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {touristSpots &&
-            touristSpots?.map((touristSpot) => (
-              <TouristSpot key={touristSpot._id} touristSpot={touristSpot} />
-            ))}
+            touristSpots
+              ?.slice(0, 6)
+              .map((touristSpot) => (
+                <TouristSpot key={touristSpot._id} touristSpot={touristSpot} />
+              ))}
         </div>
+      </div>
+      <div className="my-8 text-center lg:my-10">
+        <Link to={`/all_spots`} onClick={() => scrollTo(0, 0)}>
+          <button className="btn-base bg-title">View All Spots</button>
+        </Link>
       </div>
     </section>
   );

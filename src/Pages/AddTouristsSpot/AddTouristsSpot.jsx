@@ -37,7 +37,7 @@ const AddTouristsSpot = () => {
       userName: "Farhan Mazumder",
     };
     console.log(touristSpot);
-    fetch("http://localhost:5000/all_spots", {
+    fetch("http://localhost:5000/tourist_spots", {
       method: "POST",
       headers: {
         "content-type": "application/json",
