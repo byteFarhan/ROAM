@@ -17,6 +17,24 @@ const AllTouristSpot = () => {
   const handleItemClick = (item) => {
     setActiveItem(item);
   };
+  // Sort the array based on the "touristsSpotName" property
+  const handleSortSpotByName = () => {
+    const sortedTouristSpots = touristSpots.sort((a, b) => {
+      const nameA = a.touristsSpotName.toUpperCase();
+      const nameB = b.touristsSpotName.toUpperCase();
+
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+
+      // names must be equal
+      return 0;
+    });
+    return sortedTouristSpots;
+  };
 
   return (
     <section className="">
@@ -28,7 +46,10 @@ const AllTouristSpot = () => {
          justify-between *:py-6 mx-auto *:text-center max-w-7xl *:border-r *:border-base-300 *:flex *:justify-center *:items-center *:gap-2 *:w-full hover:*:text-primary *:cursor-pointer *:transition-colors *:delay-75 *:duration-75 *:ease-in-out"
         >
           <li
-            onClick={() => handleItemClick("name")}
+            onClick={() => {
+              handleItemClick("name");
+              handleSortSpotByName();
+            }}
             className={`${activeItem === "name" ? "bg-white border-none" : ""}`}
           >
             <FaSortAlphaDown />
