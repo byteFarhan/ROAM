@@ -62,7 +62,7 @@ const TouristSpotDetails = () => {
               {touristsSpotName}
             </h3>
             <h5 className="text-xl italic font-bold font-playfair-display text-primary">
-              {cost}/Per Person
+              ${cost}/Per Person
             </h5>
           </div>
           <p className="my-6 text-natural">{description}</p>
@@ -81,7 +81,7 @@ const TouristSpotDetails = () => {
             </p>
           </div>
           <div className="my-6">
-            <ul className="*:flex *:flex-col *:md:flex-row *:gap-3 *:md:gap-0  *:md:items-center *:p-6 *:border-y *:border-[#ebebeb]">
+            <ul className="*:flex *:flex-col *:md:flex-row *:gap-3 *:md:gap-0  *:md:items-center *:p-6 *:border-t *:border-[#ebebeb]">
               <li className="transition-all duration-100 hover:bg-gray">
                 <p className="text-lg font-bold text-title w-[40%]">
                   Destination
@@ -121,7 +121,7 @@ const TouristSpotDetails = () => {
                   ))}
                 </div>
               </li>
-              <li className="transition-all duration-100 hover:bg-gray">
+              <li className="transition-all duration-100 border-b hover:bg-gray">
                 <p className="text-lg font-bold text-title md:w-[40%]">
                   Not Included
                 </p>

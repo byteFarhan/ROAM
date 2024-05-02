@@ -34,10 +34,7 @@ const InputForm = ({
   //   };
   return (
     <div className="py-20 bg-top bg-no-repeat bg-cover bg-gray">
-      <div
-        className="mx-3 md:mx-6 lg:w-[1300px] mx-w-[1280px] lg:mx-auto bg-white
-       py-12 px-6 md:p-12 rounded-sm"
-      >
+      <div className="px-6 py-12 mx-3 bg-white rounded-sm md:mx-6 max-w-7xl lg:mx-auto md:p-12">
         <div className="mb-5 space-y-6 text-center">
           <h1
             style={{ textShadow: "2px 2px 0 rgba(0.5,0,0,0.5) " }}
@@ -110,9 +107,9 @@ const InputForm = ({
                 <span className="text-xl font-medium">Cost</span>
               </label>
               <input
-                type="text"
+                type="number"
                 name="cost"
-                placeholder="Enter Cost"
+                placeholder="Enter Cost (US Dolar)"
                 defaultValue={touristSpot?.cost}
                 required
                 className="w-full px-3 py-2 text-lg rounded-sm placeholder:text-base placeholder:font-normal focus:outline-slate-300 bg-gray"
@@ -220,14 +217,24 @@ const InputForm = ({
             <label className="label">
               <span className="text-xl font-medium">Details</span>
             </label>
-            <input
+            <textarea
+              name="description"
+              id="description"
+              cols="10"
+              rows="3"
+              placeholder="Tourist spot details"
+              defaultValue={touristSpot?.description}
+              required
+              className="w-full px-3 py-2 text-lg rounded-sm lg:p-4 placeholder:text-base placeholder:font-normal focus:outline-slate-300 bg-gray"
+            ></textarea>
+            {/* <input
               type="text"
               name="details"
               placeholder="Tourist spot details"
               defaultValue={touristSpot?.details}
               required
               className="w-full px-3 py-2 text-lg rounded-sm placeholder:text-base placeholder:font-normal focus:outline-slate-300 bg-gray"
-            />
+            /> */}
           </div>
           <button
             // style={{ textShadow: "2px 2px 0 rgba(0.5,0,0,0.5) " }}

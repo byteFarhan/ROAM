@@ -24,13 +24,20 @@ const router = createBrowserRouter([
         },
       },
       {
-        path: "/add_tourist_spot",
+        path: "/spots/:id",
+        element: <TouristSpotDetails />,
+        loader: ({ params }) => {
+          return fetch(`http://localhost:5000/all_spots/${params.id}`);
+        },
+      },
+      {
+        path: "/add_spot",
         element: <AddTouristsSpot />,
       },
       {
-        path: "/all_tourist_spot",
+        path: "/all_spots",
         element: <AllTouristSpot />,
-        loader: () => fetch("http://localhost:5000/countries_tourist_spots/"),
+        loader: () => fetch("http://localhost:5000/all_spots/"),
       },
     ],
   },

@@ -15,7 +15,7 @@ const TouristSpot = ({ touristSpot }) => {
   } = touristSpot;
   return (
     <div className="flex flex-col bg-white dark:bg-natural">
-      <Link to={`/tourist_spots/${_id}`}>
+      <Link to={`/tourist_spots/${_id}`} onClick={() => scrollTo(0, 0)}>
         <figure>
           <img
             src={image}
@@ -28,9 +28,11 @@ const TouristSpot = ({ touristSpot }) => {
         <div className="p-6">
           <div className="flex items-start justify-between">
             <h3 className="text-2xl font-bold transition-all duration-100 text-title dark:text-title-d hover:text-primary">
-              <Link to={`/tourist_spots/${_id}`}>{touristsSpotName}</Link>
+              <Link to={`/tourist_spots/${_id}`} onClick={() => scrollTo(0, 0)}>
+                {touristsSpotName}
+              </Link>
             </h3>
-            <h5 className="text-xl font-bold text-primary">{cost}</h5>
+            <h5 className="text-xl font-bold text-primary">${cost}</h5>
           </div>
           <p className="mt-1 text-natural dark:text-natural-d">
             {rating} Superb
@@ -50,6 +52,9 @@ const TouristSpot = ({ touristSpot }) => {
           <BsFillPersonVcardFill />
           {age}+
         </p>
+        <Link to={`/tourist_spots/${_id}`} onClick={() => scrollTo(0, 0)}>
+          <button className="font-bold">View Details</button>
+        </Link>
       </div>
     </div>
   );

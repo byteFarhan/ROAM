@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <section>
       <Carousel />
-      {/* <TouristSpots /> */}
+      <TouristSpots />
     </section>
   );
 };

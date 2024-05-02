@@ -41,22 +41,22 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to={"/all_tourist_spot"}
+          to={"/all_spots"}
           className={({ isActive }) =>
             isActive ? "*:underline *:text-primary *:font-medium" : "text-white"
           }
         >
-          <p className="text-primary">All Tourist Spot</p>
+          <p className="text-primary">All Spots</p>
         </NavLink>
       </li>
       <li className={`${user ? "" : "hidden"}`}>
         <NavLink
-          to={"/add_tourist_spot"}
+          to={"/add_spot"}
           className={({ isActive }) =>
             isActive ? "*:underline *:text-primary *:font-medium" : "text-white"
           }
         >
-          <p className="text-primary">AddTouristsSpot</p>
+          <p className="text-primary">Add Spot</p>
         </NavLink>
       </li>
       <li className={`${user ? "hidden" : ""}`}>

@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-// import TouristSpot from "./TouristSpot/TouristSpot";
+import TouristSpotB from "./TouristSpotB/TouristSpotB";
 
 const AllTouristSpot = () => {
   const touristSpots = useLoaderData();
@@ -13,11 +13,11 @@ const AllTouristSpot = () => {
         </h3>
       </div>
       <div className="grid gap-6 my-12 lg:grid-cols-4">
-        <div className="flex flex-col gap-6 lg:col-span-3">
-          {/* {touristSpots &&
+        <div className="flex flex-col gap-10 lg:col-span-3">
+          {touristSpots &&
             touristSpots?.map((spot) => (
-              <TouristSpot key={spot._id} theSpot={spot} />
-            ))} */}
+              <TouristSpotB key={spot._id} theSpot={spot} />
+            ))}
         </div>
         <div className="border-2 lg:col-span-1 border-title"></div>
       </div>

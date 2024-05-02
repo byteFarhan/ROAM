@@ -15,7 +15,7 @@ const AddTouristsSpot = () => {
     const totalVisitorsPerYear = form.totalVisitorsPerYear.value;
     const departure = form.departure_location.value;
     const age = form.age.value;
-    const details = form.details.value;
+    const description = form.description.value;
     const image = form.photoURL.value;
     const touristSpot = {
       touristsSpotName,
@@ -26,7 +26,7 @@ const AddTouristsSpot = () => {
       departure,
       location,
       age,
-      details,
+      description,
       image,
       cost,
       departureTime: "8:30 AM",
@@ -37,7 +37,7 @@ const AddTouristsSpot = () => {
       userName: "Farhan Mazumder",
     };
     console.log(touristSpot);
-    fetch("http://localhost:5000/countries_tourist_spots", {
+    fetch("http://localhost:5000/all_spots", {
       method: "POST",
       headers: {
         "content-type": "application/json",

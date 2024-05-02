@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SectionIntro from "../../Shared/SectionIntro/SectionIntro";
 import { useEffect } from "react";
-import TouristSpot from "./TouristSpot/TouristSpot";
+import TouristSpot from "../../Shared/TouristSpot/TouristSpot";
 
 const TouristSpots = () => {
   const [touristSpots, setTouristSpots] = useState([]);
