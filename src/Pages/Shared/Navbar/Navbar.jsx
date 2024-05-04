@@ -54,6 +54,16 @@ const Navbar = () => {
           <p className="text-primary">Add Spot</p>
         </NavLink>
       </li>
+      <li className={`${user ? "" : "hidden"}`}>
+        <NavLink
+          to={"/my_list"}
+          className={({ isActive }) =>
+            isActive ? "*:underline *:text-primary *:font-medium" : "text-white"
+          }
+        >
+          <p className="text-primary">My List</p>
+        </NavLink>
+      </li>
       <li className={`${user ? "hidden" : ""}`}>
         <NavLink
           to={"/register"}

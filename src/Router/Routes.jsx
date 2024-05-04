@@ -8,6 +8,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import UpdateTouristSpot from "../Pages/UpdateTouristSpot/UpdateTouristSpot";
+import MyList from "../Pages/MyList/MyList";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/add_spot",
         element: <AddTouristsSpot />,
+      },
+      {
+        path: "/my_list",
+        element: <MyList />,
       },
       {
         path: "update_spot/:id",
