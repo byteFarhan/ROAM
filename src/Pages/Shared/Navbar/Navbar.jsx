@@ -98,7 +98,7 @@ const Navbar = () => {
               <Link to={"/"} className="px-2 mx-2">
                 <h1 className="text-4xl font-bold text-primary">ROAM</h1>
               </Link>
-              <div onClick={changeTheme} className="">
+              <div onClick={changeTheme} className="cursor-pointer">
                 <p className="text-2xl font-medium md:text-3xl text-primary">
                   {mode === "light" ? <MdDarkMode /> : <MdOutlineLightMode />}
                 </p>

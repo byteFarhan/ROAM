@@ -7,6 +7,7 @@ import AllTouristSpot from "../Pages/AllTouristSpot/AllTouristSpot";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
+import UpdateTouristSpot from "../Pages/UpdateTouristSpot/UpdateTouristSpot";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,13 @@ const router = createBrowserRouter([
       {
         path: "/add_spot",
         element: <AddTouristsSpot />,
+      },
+      {
+        path: "update_spot/:id",
+        element: <UpdateTouristSpot />,
+        loader: ({ params }) => {
+          return fetch(`http://localhost:5000/tourist_spots/${params.id}`);
+        },
       },
       {
         path: "/all_spots",

@@ -1,12 +1,12 @@
-import swal from "sweetalert";
+import { useLoaderData } from "react-router-dom";
 import InputForm from "../Shared/InputForm/InputForm";
 import { Helmet } from "react-helmet-async";
-import useAuth from "../../hooks/useAuth";
+import swal from "sweetalert";
 
-// import swal from "sweetalert";
-const AddTouristsSpot = () => {
-  const { user } = useAuth();
-  const handleAddProduct = (e) => {
+const UpdateTouristSpot = () => {
+  const theSpot = useLoaderData();
+  //   console.log(theSpot);
+  const handleUpdateProduct = (e) => {
     e.preventDefault();
     const form = e.target;
     const touristsSpotName = form.touristSpot_name.value;
@@ -20,7 +20,7 @@ const AddTouristsSpot = () => {
     const age = form.age.value;
     const description = form.description.value;
     const image = form.photoURL.value;
-    const touristSpot = {
+    const updatedtouristSpot = {
       touristsSpotName,
       countryName,
       travelTime,
@@ -32,28 +32,22 @@ const AddTouristsSpot = () => {
       description,
       image,
       cost,
-      departureTime: "8:30 AM",
-      included: ["Accommodation", "Island Hopping Tours"],
-      notIncluded: ["Meals", "Alcoholic Beverages"],
-      rating: 9.6,
-      userEmail: user?.email,
-      userName: user?.displayName,
     };
-    console.log(touristSpot);
-    fetch("http://localhost:5000/tourist_spots", {
-      method: "POST",
+    console.log(updatedtouristSpot);
+    fetch(`http://localhost:5000/tourist_spots/${theSpot?._id}`, {
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(touristSpot),
+      body: JSON.stringify(updatedtouristSpot),
     })
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
-        if (data.insertedId) {
+        if (data.modifiedCount) {
           swal({
             title: "Good job!",
-            text: "The Spot has been added successfully",
+            text: "The Spot has been updated successfully",
             icon: "success",
           });
           form.reset();
@@ -69,18 +63,19 @@ const AddTouristsSpot = () => {
   return (
     <section>
       <Helmet>
-        <title>ROAM | Add Spot</title>
+        <title>ROAM | Update Spot</title>
       </Helmet>
       <section>
         <InputForm
-          taitle={`Add New Tourist Spot`}
-          description={`Discover breathtaking destinations with our travel agency! Explore iconic landmarks and hidden gems. Book now for unforgettable experiences!`}
-          submitText="Add Tourist Spot"
-          handleSubmit={handleAddProduct}
+          taitle={`Update Tourist Spot`}
+          description={`Update your tourist spot information effortlessly! Our streamlined form ensures accurate and up-to-date listings for travelers worldwide. Simplify your management process today!`}
+          submitText="Update Tourist Spot"
+          handleSubmit={handleUpdateProduct}
+          touristSpot={theSpot}
         />
       </section>
     </section>
   );
 };
 
-export default AddTouristsSpot;
+export default UpdateTouristSpot;

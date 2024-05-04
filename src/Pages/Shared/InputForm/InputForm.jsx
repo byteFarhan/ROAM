@@ -177,7 +177,7 @@ const InputForm = ({
                 type="text"
                 name="photoURL"
                 placeholder="Enter photo URL"
-                defaultValue={touristSpot?.photoURL}
+                defaultValue={touristSpot?.image}
                 required
                 className="w-full px-3 py-2 text-lg rounded-sm placeholder:text-base placeholder:font-normal focus:outline-slate-300 bg-gray"
               />
