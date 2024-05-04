@@ -50,12 +50,11 @@ const Register = () => {
         }).then(() => {
           setUser({ ...result.user, displayName: name, photoURL });
           setSuccess("Registation successfull.");
-          // e.target.reset();
           swal("Registation successfull.", {
             button: false,
           });
           reset();
-          //   navigate("/");
+          navigate(location.state ? location.state : "/");
         });
         setSuccess("Registation successfull.");
       })
@@ -195,7 +194,7 @@ const Register = () => {
               <p className="my-3 text-center">
                 Already have an account?{" "}
                 <Link to={"/login"} className="text-pink-600 hover:underline">
-                  Register
+                  Login
                 </Link>
               </p>
             </div>
