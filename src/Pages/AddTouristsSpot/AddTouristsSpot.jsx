@@ -1,5 +1,6 @@
 import swal from "sweetalert";
 import InputForm from "../Shared/InputForm/InputForm";
+import { Helmet } from "react-helmet-async";
 
 // import swal from "sweetalert";
 const AddTouristsSpot = () => {
@@ -58,14 +59,19 @@ const AddTouristsSpot = () => {
       });
   };
   return (
-    <div>
-      <InputForm
-        taitle={`Add New Tourist Spot`}
-        description="It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here."
-        submitText="Add Tourist Spot"
-        handleSubmit={handleAddProduct}
-      />
-    </div>
+    <section>
+      <Helmet>
+        <title>ROAM | Add Spot</title>
+      </Helmet>
+      <div>
+        <InputForm
+          taitle={`Add New Tourist Spot`}
+          description="It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here."
+          submitText="Add Tourist Spot"
+          handleSubmit={handleAddProduct}
+        />
+      </div>
+    </section>
   );
 };
 

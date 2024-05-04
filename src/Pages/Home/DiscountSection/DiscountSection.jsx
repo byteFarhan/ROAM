@@ -16,12 +16,12 @@ const DiscountSection = () => {
             Aerial view of Cape Town with Cape Town Stadium
           </h5>
           <p className="font-medium">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-            asperiores fugit atque quibusdam accusamus sapiente reiciendis, quos
-            neque consequuntur libero cum unde dolor quam a, odit perspiciatis
-            ipsa quaerat eius?
+            {`Explore our latest discounts and offers, curated just for you! From
+            exotic getaways to serene retreats, unlock unbeatable deals on your
+            dream destinations. Plan your next adventure without breaking the
+            bank!`}
           </p>
-          <button className="px-8 py-4 font-bold !text-primary bg-white hover:bg-title hover:!text-white transition-all duration-75 delay-75 ease-in-out">
+          <button className="px-8 py-4 font-bold !text-primary bg-white hover:bg-title hover:!text-white transition-all duration-100 delay-100 ease-in-out">
             View More
           </button>
         </div>

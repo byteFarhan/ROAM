@@ -5,6 +5,7 @@ import { BsFillPersonVcardFill } from "react-icons/bs";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { FaHeart } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const TouristSpotDetails = () => {
   const touristSpot = useLoaderData();
@@ -32,7 +33,10 @@ const TouristSpotDetails = () => {
   //   console.log(Departure);
   return (
     <section>
-      <div
+      <Helmet>
+        <title>ROAM | Spot Details</title>
+      </Helmet>
+      <section
         style={{ backgroundImage: `url(${image})` }}
         className="bg-no-repeat bg-cover h-[70vh] flex justify-center items-center bg-gradient-to-r from-[#13131866] to-[#13131866] bg-center px-5 lg:px-0"
       >
@@ -54,8 +58,8 @@ const TouristSpotDetails = () => {
         </div>
         {/* <h1 className="text-3xl font-bold">{tourists_spot_name}</h1>
       <p className="text-3xl font-bold">{_id}</p> */}
-      </div>
-      <div className="max-w-[1280px] my-20 lg:my-24 mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6">
+      </section>
+      <section className="max-w-[1280px] my-20 lg:my-24 mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6">
         <div className="px-5 lg:col-span-3 lg:px-0">
           <div className="space-y-2">
             <h3 className="text-3xl font-bold lg:text-4xl text-title">
@@ -142,7 +146,7 @@ const TouristSpotDetails = () => {
         <div className="lg:col-span-1-title">
           <div className="lg:h-[80vh]  border-title border-2 "></div>
         </div>
-      </div>
+      </section>
     </section>
   );
 };

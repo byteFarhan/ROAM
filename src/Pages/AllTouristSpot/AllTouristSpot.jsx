@@ -6,10 +6,11 @@ import { useState } from "react";
 import { ImDownload2, ImUpload2 } from "react-icons/im";
 import { IoIosStarHalf } from "react-icons/io";
 import { FaSortAlphaDown } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const AllTouristSpot = () => {
   const touristSpots = useLoaderData();
-  // console.log(touristSpots);
+  console.log(touristSpots);
   // console.log(touristSpots.slice());
   const [activeItem, setActiveItem] = useState(null);
   const handleItemClick = (item) => {
@@ -33,21 +34,27 @@ const AllTouristSpot = () => {
     });
     return sortedTouristSpots;
   };
+  // Sort the array based on the "cost low to high"
   const handleSortByPriceLowToHigh = () => {
     return touristSpots.sort((a, b) => a.cost - b.cost);
   };
+  // Sort the array based on the "cost high to low"
   const handleSortByPriceHighToLow = () => {
     return touristSpots.sort((a, b) => b.cost - a.cost);
   };
+  // Sort the array based on the "rating"
   const handleSortByRating = () => {
     return touristSpots.sort((a, b) => b.rating - a.rating);
   };
 
   return (
     <section className="">
+      <Helmet>
+        <title>ROAM | All Spots</title>
+      </Helmet>
       <Banner bannerTitle={`Tour Search`} bannerImg={bannerImg} />
       {/* Sort tourist spots Section */}
-      <div className="bg-[#f8f8f8]">
+      <section className="bg-[#f8f8f8]">
         <ul
           className="flex flex-col md:flex-row items-center *:text-natural *:lg:text-lg *:font-medium *:lg:font-semibold
          justify-between *:py-6 mx-auto *:text-center max-w-7xl *:border-r *:border-base-300 *:flex *:justify-center *:items-center *:gap-2 *:w-full hover:*:text-primary *:cursor-pointer *:transition-colors *:delay-75 *:duration-75 *:ease-in-out"
@@ -100,7 +107,7 @@ const AllTouristSpot = () => {
             Rating
           </li>
         </ul>
-      </div>
+      </section>
       <section className="grid gap-6 max-w-[1280px] mx-auto px-5 lg:px-0 my-24 lg:grid-cols-4">
         <div className="flex flex-col gap-10 lg:col-span-3">
           {touristSpots &&

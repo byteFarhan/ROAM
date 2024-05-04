@@ -15,7 +15,7 @@ const ErrorPage = () => {
       />
       <div className="text-center">
         <Link to={"/"}>
-          <button className="my-3 text-white rounded-none btn bg-primary hover:bg-primary">
+          <button className="my-3 text-white rounded-none btn-base bg-primary">
             Go Home
           </button>
         </Link>
