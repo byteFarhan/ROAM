@@ -22,6 +22,7 @@ const Register = () => {
   const {
     createUserWithEmail,
     setUser,
+    user,
     // updateUserProfile,
   } = useAuth();
   const onSubmit = (data) => {
@@ -66,12 +67,16 @@ const Register = () => {
         });
       });
   };
+  //   if (user) {
+  //     navigate("/");
+  //     return;
+  //   }
   return (
     <section>
       <Helmet>
         <title>ROAM | Register</title>
       </Helmet>
-      <div className="py-6 lg:bg-[#F3F3F3] px-5 md:px-0">
+      <section className="py-6 lg:bg-[#F3F3F3] px-5 md:px-0">
         <div className="mx-auto max-w-7xl"></div>
         <div className="min-h-[87vh] hero ">
           <div className=" w-full max-w-[500px] md:px-6 card rounded lg:bg-base-100 bg-[#F3F3F3]">
@@ -200,7 +205,7 @@ const Register = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </section>
   );
 };

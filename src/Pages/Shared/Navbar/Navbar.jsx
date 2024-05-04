@@ -1,31 +1,26 @@
 import { Link, NavLink } from "react-router-dom";
 import useTheme from "../../../hooks/useTheme";
 import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
-// import logo from "../../../assets/logo.png";
-// import avtr from "../../../assets/house-logo.png";
-// import useAuth from "../../../hooks/useAuth";
-// import { IoExitOutline } from "react-icons/io5";
-// import swal from "sweetalert";
+import { IoExitOutline } from "react-icons/io5";
+import useAuth from "../../../hooks/useAuth";
+import swal from "sweetalert";
 
 const Navbar = () => {
   const { changeTheme, mode } = useTheme();
-  const user = true;
-  // const { user, userSignOut } = useAuth();
-  // const handleLogout = () => {
-  //   userSignOut()
-  //     .then(() => {
-  //       // Sign-out successful.
-  //       swal("Logout successfull.", {
-  //         button: false,
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       // An error happened.
-  //       swal(error.message, {
-  //         button: false,
-  //       });
-  //     });
-  // };
+  const { user, userSignOut } = useAuth();
+  const handleLogout = () => {
+    userSignOut()
+      .then(() => {
+        swal("Logout successfull.", {
+          button: false,
+        });
+      })
+      .catch((error) => {
+        swal(error.message, {
+          button: false,
+        });
+      });
+  };
 
   const navItems = (
     <>
@@ -78,12 +73,12 @@ const Navbar = () => {
           <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
           <div className="flex flex-col drawer-content">
             {/* Navbar */}
-            <div className="max-w-[1280px] mx-auto justify-between w-full navbar lg:flex-row ">
+            <div className="justify-between w-full mx-auto max-w-7xl navbar lg:flex-row">
               <div className="flex-none lg:hidden">
                 <label
                   htmlFor="my-drawer-3"
                   aria-label="open sidebar"
-                  className="text-white border-none btn btn-square bg-navy swap swap-rotate"
+                  className="text-white border-none btn btn-square bg-title swap swap-rotate"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +96,6 @@ const Navbar = () => {
                 </label>
               </div>
               <Link to={"/"} className="px-2 mx-2">
-                {/* <img src={logo} alt="" className="h-10 md:h-auto" /> */}
                 <h1 className="text-4xl font-bold text-primary">ROAM</h1>
               </Link>
               <div onClick={changeTheme} className="">
@@ -139,17 +133,20 @@ const Navbar = () => {
                       </li>
                       <li>
                         <button
-                          // onClick={handleLogout}
-                          className="flex items-center gap-2 btn-base btn-navy"
+                          onClick={handleLogout}
+                          className="flex items-center gap-2 btn-base bg-primary hover:bg-title"
                         >
                           Logout
-                          {/* <IoExitOutline /> */}
+                          <IoExitOutline />
                         </button>
                       </li>
                     </ul>
                   </div>
                 ) : (
-                  <Link to={"/login"} className="btn-base bg-primary">
+                  <Link
+                    to={"/login"}
+                    className="px-3 py-2 font-bold text-white md:px-5 bg-primary"
+                  >
                     Login
                   </Link>
                 )}
