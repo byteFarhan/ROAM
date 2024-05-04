@@ -1,7 +1,39 @@
+import { useState } from "react";
+import { Helmet } from "react-helmet-async";
+import { useForm } from "react-hook-form";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import swal from "sweetalert";
 
 const Login = () => {
+  const { signInWithEmail } = useAuth();
+  const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const [showPassword, setShowPassword] = useState(false);
+  const onSubmit = (data) => {
+    // console.log(data);
+    const { email, password } = data;
+    signInWithEmail(email, password)
+      .then(() => {
+        swal("Login successfull.", {
+          button: false,
+        });
+        reset();
+        navigate(location.state ? location.state : "/");
+      })
+      .catch((error) => {
+        swal(error.message, {
+          button: false,
+          icon: "error",
+        });
+      });
+  };
   return (
     <section>
       <Helmet>
@@ -15,7 +47,7 @@ const Login = () => {
               Login your account
             </h3>
             <hr className="w-5/6 mx-auto mt-10" />
-            <form className="pb-0 card-body">
+            <form onSubmit={handleSubmit(onSubmit)} className="pb-0 card-body">
               <div className=" form-control">
                 <label className="label">
                   <span className="label-text">Email address</span>
@@ -25,7 +57,13 @@ const Login = () => {
                   placeholder="Email address"
                   name="email"
                   className="rounded input-bordered input lg:bg-[#F3F3F3]"
+                  {...register("email", { required: true })}
                 />
+                {errors.email && (
+                  <span className="mt-2 text-red-600">
+                    This field is required
+                  </span>
+                )}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -37,8 +75,13 @@ const Login = () => {
                     placeholder="Password"
                     name="password"
                     className="input rounded input-bordered w-full lg:bg-[#F3F3F3]"
+                    {...register("password", { required: true })}
                   />
-
+                  {errors.password && (
+                    <span className="mt-2 text-red-600">
+                      This field is required
+                    </span>
+                  )}
                   <span
                     onClick={() => setShowPassword(!showPassword)}
                     className="absolute top-4 right-3"
