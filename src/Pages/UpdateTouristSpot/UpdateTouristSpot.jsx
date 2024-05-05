@@ -33,7 +33,7 @@ const UpdateTouristSpot = () => {
       image,
       cost,
     };
-    console.log(updatedtouristSpot);
+    // console.log(updatedtouristSpot);
     fetch(`http://localhost:5000/tourist_spots/${theSpot?._id}`, {
       method: "PUT",
       headers: {

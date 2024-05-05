@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,7 +9,7 @@ import sliderImg2 from "../../../assets/sliderImg/slider-2.jpg";
 import sliderImg3 from "../../../assets/sliderImg/slider-3.jpg";
 
 import Slide from "./Slide/Slide";
-const Carousel = () => {
+const Carousel = ({ mySpots }) => {
   const sliderRef = useRef(null);
   //   console.log(sliderRef);
 
@@ -47,25 +48,38 @@ const Carousel = () => {
         </div>
 
         <section className="">
-          <Slider ref={sliderRef} {...settings} className="">
+          {mySpots?.length >= 2 ? (
+            <>
+              <Slider ref={sliderRef} {...settings} className="">
+                {mySpots?.map((spot) => (
+                  <Slide
+                    key={spot._id}
+                    slideImg={spot.image}
+                    title={spot.touristsSpotName}
+                  />
+                ))}
+              </Slider>
+            </>
+          ) : (
+            <>
+              <Slider ref={sliderRef} {...settings} className="">
+                <Slide
+                  slideImg={sliderImg1}
+                  title={"Explore Exotic Destinations"}
+                />
+                <Slide slideImg={sliderImg2} title={`Adventure Awaits`} />
+                <Slide slideImg={sliderImg3} title={`Rejuvenate Your Soul`} />
+              </Slider>
+            </>
+          )}
+          {/* <Slider ref={sliderRef} {...settings} className="">
             <Slide
               slideImg={sliderImg1}
               title={"Explore Exotic Destinations"}
-              description={`Dive into adventure with our curated travel packages. From Fiji's beaches to Machu Picchu's wonders, your dream getaway awaits`}
             />
-            <Slide
-              slideImg={sliderImg2}
-              title={`Adventure Awaits`}
-              description={`Satisfy your wanderlust with our tailor-made experiences. From mountain treks to island retreats, let's craft your perfect journey!`}
-            />
-            <Slide
-              slideImg={sliderImg3}
-              title={`Rejuvenate Your Soul`}
-              description={`Discover tranquility in our serene escapes. From luxury spas to secluded hideaways, find your slice of paradise and unwind.`}
-            />
-            {/* <CarouselSlide />
-            <CarouselSlide /> */}
-          </Slider>
+            <Slide slideImg={sliderImg2} title={`Adventure Awaits`} />
+            <Slide slideImg={sliderImg3} title={`Rejuvenate Your Soul`} />
+          </Slider> */}
         </section>
       </section>
     </>
@@ -73,3 +87,6 @@ const Carousel = () => {
 };
 
 export default Carousel;
+Carousel.propTypes = {
+  mySpots: PropTypes.array,
+};

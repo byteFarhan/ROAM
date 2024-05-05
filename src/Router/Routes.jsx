@@ -39,8 +39,11 @@ const router = createBrowserRouter([
         element: <AddTouristsSpot />,
       },
       {
-        path: "/my_list",
+        path: "/my_list/",
         element: <MyList />,
+        // loader: ({ params }) => {
+        //   return fetch(`http://localhost:5000/tourist_spots/${params.email}`);
+        // },
       },
       {
         path: "update_spot/:id",

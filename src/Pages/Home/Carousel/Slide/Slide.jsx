@@ -18,7 +18,7 @@ const Slide = ({ slideImg, title, description }) => {
               {title}
             </h1>
             {/* <hr className="h-1 mx-auto border-none rounded bg-primary w-28" /> */}
-            <p className="text-xl text-[#D9F1Fa] lg:text-3xl font-playfair-display font-semibold">
+            <p className="text-xl italic text-[#D9F1Fa] lg:text-3xl font-playfair-display font-semibold">
               {description}
             </p>
             <button className="btn-base bg-primary">Spacial Offer</button>

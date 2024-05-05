@@ -1,0 +1,32 @@
+[
+  {
+    "countryName": "Thailand",
+    "image": "https://i.postimg.cc/43qcVyWs/Thailand2.jpg",
+    "extraInfo": "Land of Smiles"
+  },
+  {
+    "countryName": "Vietnam",
+    "image": "https://i.postimg.cc/qvB2d9tV/Vietnam.jpg",
+    "extraInfo": "Timeless Charm"
+  },
+  {
+    "countryName": "Indonesia",
+    "image": "https://i.postimg.cc/k5B82KFT/Indonesia.jpg",
+    "extraInfo": "Archipelago Wonders"
+  },
+  {
+    "countryName": "Malaysia",
+    "image": "https://example.com/malaysia.jpg",
+    "extraInfo": "Truly Asia"
+  },
+  {
+    "countryName": "Cambodia",
+    "image": "https://i.postimg.cc/yYy0tV8y/Cambodia.jpg",
+    "extraInfo": "Kingdom of Wonder"
+  },
+  {
+    "countryName": "Philippines",
+    "image": "https://i.postimg.cc/k4SbcCH8/philippines-banaue-rice-terraces.jpg",
+    "extraInfo": "Pearl of the Orient Seas"
+  }
+]

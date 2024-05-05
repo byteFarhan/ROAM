@@ -7,45 +7,53 @@ import { ImDownload2, ImUpload2 } from "react-icons/im";
 import { IoIosStarHalf } from "react-icons/io";
 import { FaSortAlphaDown } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import useSort from "../../hooks/useSort";
 
 const AllTouristSpot = () => {
   const touristSpots = useLoaderData();
-  console.log(touristSpots);
+  const {
+    handleSortSpotByName,
+    handleSortByPriceLowToHigh,
+    handleSortByPriceHighToLow,
+    handleSortByRating,
+  } = useSort(touristSpots.length ? touristSpots : []);
+  console.log(handleSortByRating);
+  // console.log(touristSpots);
   // console.log(touristSpots.slice());
   const [activeItem, setActiveItem] = useState(null);
   const handleItemClick = (item) => {
     setActiveItem(item);
   };
-  // Sort the array based on the "touristsSpotName" property
-  const handleSortSpotByName = () => {
-    const sortedTouristSpots = touristSpots.sort((a, b) => {
-      const nameA = a.touristsSpotName.toUpperCase();
-      const nameB = b.touristsSpotName.toUpperCase();
+  // // Sort the array based on the "touristsSpotName" property
+  // const handleSortSpotByName = () => {
+  //   const sortedTouristSpots = touristSpots.sort((a, b) => {
+  //     const nameA = a.touristsSpotName.toUpperCase();
+  //     const nameB = b.touristsSpotName.toUpperCase();
 
-      if (nameA < nameB) {
-        return -1;
-      }
-      if (nameA > nameB) {
-        return 1;
-      }
+  //     if (nameA < nameB) {
+  //       return -1;
+  //     }
+  //     if (nameA > nameB) {
+  //       return 1;
+  //     }
 
-      // names must be equal
-      return 0;
-    });
-    return sortedTouristSpots;
-  };
-  // Sort the array based on the "cost low to high"
-  const handleSortByPriceLowToHigh = () => {
-    return touristSpots.sort((a, b) => a.cost - b.cost);
-  };
-  // Sort the array based on the "cost high to low"
-  const handleSortByPriceHighToLow = () => {
-    return touristSpots.sort((a, b) => b.cost - a.cost);
-  };
-  // Sort the array based on the "rating"
-  const handleSortByRating = () => {
-    return touristSpots.sort((a, b) => b.rating - a.rating);
-  };
+  //     // names must be equal
+  //     return 0;
+  //   });
+  //   return sortedTouristSpots;
+  // };
+  // // Sort the array based on the "cost low to high"
+  // const handleSortByPriceLowToHigh = () => {
+  //   return touristSpots.sort((a, b) => a.cost - b.cost);
+  // };
+  // // Sort the array based on the "cost high to low"
+  // const handleSortByPriceHighToLow = () => {
+  //   return touristSpots.sort((a, b) => b.cost - a.cost);
+  // };
+  // // Sort the array based on the "rating"
+  // const handleSortByRating = () => {
+  //   return touristSpots.sort((a, b) => b.rating - a.rating);
+  // };
 
   return (
     <section className="">
@@ -110,7 +118,7 @@ const AllTouristSpot = () => {
       </section>
       <section className="grid gap-6 max-w-[1280px] mx-auto px-5 lg:px-0 my-24 lg:grid-cols-4">
         <div className="flex flex-col gap-10 lg:col-span-3">
-          {touristSpots &&
+          {touristSpots?.length &&
             touristSpots?.map((spot) => (
               <TouristSpotB key={spot._id} theSpot={spot} />
             ))}

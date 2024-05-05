@@ -5,7 +5,7 @@ import TouristSpot from "../../Shared/TouristSpot/TouristSpot";
 import { Link } from "react-router-dom";
 
 const TouristSpots = () => {
-  const [touristSpots, setTouristSpots] = useState(null);
+  const [touristSpots, setTouristSpots] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5000/tourist_spots")
       .then((res) => res.json())
@@ -24,7 +24,7 @@ const TouristSpots = () => {
           description={`Discover breathtaking destinations with our expertly curated tours. Book now and embark on your next unforgettable adventure with us!`}
         />
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {touristSpots &&
+          {touristSpots?.length &&
             touristSpots
               ?.slice(0, 6)
               .map((touristSpot) => (

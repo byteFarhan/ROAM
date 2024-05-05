@@ -56,7 +56,7 @@ const Navbar = () => {
       </li>
       <li className={`${user ? "" : "hidden"}`}>
         <NavLink
-          to={"/my_list"}
+          to={`/my_list`}
           className={({ isActive }) =>
             isActive ? "*:underline *:text-primary *:font-medium" : "text-white"
           }

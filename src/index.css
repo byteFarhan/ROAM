@@ -50,5 +50,5 @@
 
 ::-webkit-scrollbar-thumb {
   background: #ff681a; /* color of the scrollbar */
-  border-radius: 999px;
+  /* border-radius: 999px; */
 }
