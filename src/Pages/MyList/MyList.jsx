@@ -9,7 +9,44 @@ const MyList = () => {
   const { user } = useAuth();
   console.log(user?.email);
   const [mySpots, setMySpots] = useState([]);
-
+  const handleDelete = (id) => {
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this spot!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        fetch(`http://localhost:5000/tourist_spots/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            // console.log(data);
+            if (data.deletedCount) {
+              swal({
+                title: "Good job!",
+                text: "The Spot has been deleted successfullys",
+                icon: "success",
+              });
+              const remainingSpots = mySpots.filter((spot) => spot._id !== id);
+              console.log(remainingSpots);
+              setMySpots(remainingSpots);
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            swal({
+              text: error.message,
+              icon: "error",
+            });
+          });
+      } else {
+        swal("The spot deletion has been canceled.");
+      }
+    });
+  };
   useEffect(() => {
     if (!user) {
       return;
