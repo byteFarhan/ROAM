@@ -16,11 +16,11 @@ const TouristSpot = ({ touristSpot }) => {
   return (
     <div className="flex flex-col bg-white dark:bg-natural">
       <Link to={`/tourist_spots/${_id}`} onClick={() => scrollTo(0, 0)}>
-        <figure>
+        <figure className="overflow-hidden">
           <img
             src={image}
             alt={touristsSpotName}
-            className="h-[450px] lg:h-[500px] w-auto object-cover"
+            className="h-[450px] lg:h-[500px] w-auto object-cover transition-transform duration-300 delay-300 ease-in-out hover:scale-110"
           />
         </figure>
       </Link>

@@ -19,15 +19,15 @@ const TouristSpotB = ({ theSpot }) => {
         <Link
           to={`/tourist_spots/${_id}`}
           onClick={() => scrollTo(0, 0)}
-          className="h-full"
+          className="h-ful"
         >
-          {/* <figure className="h-full"> */}
-          <img
-            src={image}
-            alt={touristsSpotName}
-            className="object-cover size-full"
-          />
-          {/* </figure> */}
+          <figure className="h-full overflow-hidden">
+            <img
+              src={image}
+              alt={touristsSpotName}
+              className="object-cover transition-transform duration-300 ease-in-out delay-300 size-full hover:scale-110"
+            />
+          </figure>
         </Link>
       </div>
 

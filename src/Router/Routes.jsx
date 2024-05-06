@@ -34,6 +34,7 @@ const router = createBrowserRouter([
       //     return fetch(`http://localhost:5000/all_spots/${params.id}`);
       //   },
       // },
+
       {
         path: "/add_spot",
         element: <AddTouristsSpot />,

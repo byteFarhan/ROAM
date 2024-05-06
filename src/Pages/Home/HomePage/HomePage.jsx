@@ -3,6 +3,8 @@ import Carousel from "../Carousel/Carousel";
 import DiscountSection from "../DiscountSection/DiscountSection";
 import TouristSpots from "../TouristSpots/TouristSpots";
 
+import Testimonial from "../Testimonial/Testimonial";
+
 const HomePage = () => {
   return (
     <section>
@@ -12,6 +14,7 @@ const HomePage = () => {
       <Carousel />
       <TouristSpots />
       <DiscountSection />
+      <Testimonial />
     </section>
   );
 };

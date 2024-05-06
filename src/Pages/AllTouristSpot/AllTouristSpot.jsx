@@ -17,43 +17,11 @@ const AllTouristSpot = () => {
     handleSortByPriceHighToLow,
     handleSortByRating,
   } = useSort(touristSpots.length ? touristSpots : []);
-  console.log(handleSortByRating);
-  // console.log(touristSpots);
-  // console.log(touristSpots.slice());
+
   const [activeItem, setActiveItem] = useState(null);
   const handleItemClick = (item) => {
     setActiveItem(item);
   };
-  // // Sort the array based on the "touristsSpotName" property
-  // const handleSortSpotByName = () => {
-  //   const sortedTouristSpots = touristSpots.sort((a, b) => {
-  //     const nameA = a.touristsSpotName.toUpperCase();
-  //     const nameB = b.touristsSpotName.toUpperCase();
-
-  //     if (nameA < nameB) {
-  //       return -1;
-  //     }
-  //     if (nameA > nameB) {
-  //       return 1;
-  //     }
-
-  //     // names must be equal
-  //     return 0;
-  //   });
-  //   return sortedTouristSpots;
-  // };
-  // // Sort the array based on the "cost low to high"
-  // const handleSortByPriceLowToHigh = () => {
-  //   return touristSpots.sort((a, b) => a.cost - b.cost);
-  // };
-  // // Sort the array based on the "cost high to low"
-  // const handleSortByPriceHighToLow = () => {
-  //   return touristSpots.sort((a, b) => b.cost - a.cost);
-  // };
-  // // Sort the array based on the "rating"
-  // const handleSortByRating = () => {
-  //   return touristSpots.sort((a, b) => b.rating - a.rating);
-  // };
 
   return (
     <section className="">

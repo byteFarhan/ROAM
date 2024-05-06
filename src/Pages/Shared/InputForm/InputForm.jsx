@@ -21,12 +21,11 @@ const InputForm = ({
   ];
   const countryOptions = [
     { value: "Thailand" },
-    { value: "Bangladesh" },
-    { value: "India" },
+    { value: "Cambodia" },
+    { value: "Philippines" },
     { value: "Vietnam" },
     { value: "Malaysia" },
     { value: "Indonesia" },
-    { value: "Cambodia" },
     { value: "Other" },
   ];
   //   const handleTravelTimeSelect = (e) => {
@@ -238,7 +237,7 @@ const InputForm = ({
           </div>
           <button
             // style={{ textShadow: "2px 2px 0 rgba(0.5,0,0,0.5) " }}
-            className="w-full mb-5 text-xl font-semibold text-white btn md:text-2xl bg-primary hover:bg-primary"
+            className="w-full mb-5 text-xl font-semibold rounded-none hover:bg-title  text-white btn md:text-2xl bg-primary transition-all duration-200 delay-100 ease-in-out"
           >
             {submitText}
           </button>

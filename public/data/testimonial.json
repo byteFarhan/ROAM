@@ -1,0 +1,26 @@
+[
+  {
+    "author": "Sarah Smith",
+    "authorImg": "https://i.postimg.cc/FFdxZLW9/member2.png",
+    "rating": 5,
+    "description": "Absolutely loved my experience with this agency! The trip was flawless, from booking to the last day. I highly recommend them to anyone looking for a memorable adventure."
+  },
+  {
+    "author": "John Doe",
+    "authorImg": "https://i.postimg.cc/6qvL5k27/member3.png",
+    "rating": 4.8,
+    "description": "Fantastic service! The team was attentive and knowledgeable, ensuring we had the best experience possible. Can't wait to book with them again."
+  },
+  {
+    "author": "Emily Chang",
+    "authorImg": "https://i.postimg.cc/RF8LmSF5/member4.png",
+    "rating": 5,
+    "description": "Incredible journey! Every detail was carefully planned, and the destinations were breathtaking. Thank you for making my dream vacation a reality!"
+  },
+  {
+    "author": "Michael Brown",
+    "authorImg": "https://i.postimg.cc/QxvwmDkz/member1.png",
+    "rating": 4.5,
+    "description": "Had an amazing time! The trip exceeded all expectations. The guides were friendly and knowledgeable, making the experience truly unforgettable."
+  }
+]

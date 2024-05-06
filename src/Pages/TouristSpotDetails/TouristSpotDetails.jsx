@@ -1,11 +1,11 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import separator from "../../assets/separator.png";
 import { MdOutlineAccessTime } from "react-icons/md";
 import { BsFillPersonVcardFill } from "react-icons/bs";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { FaHeart } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import BannerB from "../Shared/BannerB/BannerB";
 
 const TouristSpotDetails = () => {
   const touristSpot = useLoaderData();
@@ -36,29 +36,8 @@ const TouristSpotDetails = () => {
       <Helmet>
         <title>ROAM | Spot Details</title>
       </Helmet>
-      <section
-        style={{ backgroundImage: `url(${image})` }}
-        className="bg-no-repeat bg-cover h-[70vh] flex justify-center items-center bg-gradient-to-r from-[#13131866] to-[#13131866] bg-center px-5 lg:px-0"
-      >
-        <div className="">
-          <h2 className="text-5xl lg:text-[90px] font-bold text-center text-white">
-            {touristsSpotName}
-          </h2>
-          <img src={separator} alt="" className="mx-auto" draggable="false" />
-          {/* <div className="px-5 py-10">
-          <div className="">
-            <div className="flex items-center justify-between">
-              <h5 className="text-3xl font-bold text-white font-playfair-display">
-                {average_cost}
-              </h5>
-              <h5 className="text-3xl font-bold text-white">{rating}</h5>
-            </div>
-          </div>
-        </div> */}
-        </div>
-        {/* <h1 className="text-3xl font-bold">{tourists_spot_name}</h1>
-      <p className="text-3xl font-bold">{_id}</p> */}
-      </section>
+      {/* Banner section */}
+      <BannerB bannerTitle={touristsSpotName} bannerImage={image} />
       <section className="max-w-[1280px] my-20 lg:my-24 mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6">
         <div className="px-5 lg:col-span-3 lg:px-0">
           <div className="space-y-2">

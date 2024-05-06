@@ -4,7 +4,7 @@ const DiscountSection = () => {
   return (
     <section
       style={{ backgroundImage: `url(${parallaxImg})` }}
-      className="py-12 mb-24 bg-center bg-no-repeat bg-cover"
+      className="py-12 bg-center bg-no-repeat bg-cover"
     >
       <div className="flex flex-col lg:flex-row items-center justify-between mx-auto max-w-7xl lg:*:flex-1 gap-14 px-8 md:px-10 lg:px-0">
         <div>
