@@ -10,6 +10,7 @@ import Login from "../Pages/Login/Login";
 import UpdateTouristSpot from "../Pages/UpdateTouristSpot/UpdateTouristSpot";
 import MyList from "../Pages/MyList/MyList";
 import CountrySpots from "../Pages/CountrySpots/CountrySpots";
+import PrivetRoute from "./PrivetRoute/PrivetRoute";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/tourist_spots/:id",
-        element: <TouristSpotDetails />,
+        element: (
+          <PrivetRoute>
+            <TouristSpotDetails />
+          </PrivetRoute>
+        ),
         loader: ({ params }) => {
           return fetch(`http://localhost:5000/tourist_spots/${params.id}`);
         },
@@ -37,25 +42,41 @@ const router = createBrowserRouter([
       // },
       {
         path: "/countries/:country",
-        element: <CountrySpots />,
+        element: (
+          <PrivetRoute>
+            <CountrySpots />
+          </PrivetRoute>
+        ),
         loader: ({ params }) => {
           return fetch(`http://localhost:5000/countries/${params.country}`);
         },
       },
       {
         path: "/add_spot",
-        element: <AddTouristsSpot />,
+        element: (
+          <PrivetRoute>
+            <AddTouristsSpot />
+          </PrivetRoute>
+        ),
       },
       {
         path: "/my_list/",
-        element: <MyList />,
+        element: (
+          <PrivetRoute>
+            <MyList />
+          </PrivetRoute>
+        ),
         // loader: ({ params }) => {
         //   return fetch(`http://localhost:5000/tourist_spots/${params.email}`);
         // },
       },
       {
         path: "update_spot/:id",
-        element: <UpdateTouristSpot />,
+        element: (
+          <PrivetRoute>
+            <UpdateTouristSpot />
+          </PrivetRoute>
+        ),
         loader: ({ params }) => {
           return fetch(`http://localhost:5000/tourist_spots/${params.id}`);
         },

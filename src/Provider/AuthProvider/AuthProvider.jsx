@@ -4,12 +4,12 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  GoogleAuthProvider,
+  GithubAuthProvider,
 } from "firebase/auth";
 import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
 import auth from "../../firebase/firebase.config";
-import { GoogleAuthProvider } from "firebase/auth/cordova";
-import { GithubAuthProvider } from "firebase/auth/web-extension";
 
 export const AuthContext = createContext(null);
 

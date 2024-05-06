@@ -25,27 +25,27 @@ const Testimonial = () => {
     arrows: false,
     autoplay: true,
     speed: 1000,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          // dots: true,
-        },
-      },
       // {
-      //   breakpoint: 600,
+      //   breakpoint: 768,
       //   settings: {
       //     slidesToShow: 2,
-      //     slidesToScroll: 2,
-      //     initialSlide: 2,
+      //     slidesToScroll: 1,
+      //     // infinite: true,
+      //     // dots: true,
       //   },
       // },
       {
-        breakpoint: 640,
+        breakpoint: 780,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          // initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -68,7 +68,7 @@ const Testimonial = () => {
           description={`Embark on epic journeys with our travel agency. Discover breathtaking destinations, experience local cultures, and create lasting memories. Let us turn your dreams into extraordinary adventures.`}
         />
         <div className="relative">
-          <div className="absolute z-10 flex justify-between w-full top-1/2">
+          <div className="absolute z-10 flex justify-between w-full px-5 top-1/2 lg:px-0">
             <div
               onClick={prevSlide}
               className="p-3 md:p-5 bg-title rounded-full cursor-pointer hover:bg-primary *:hover:text-white transition-all duration-300 ease-in-out mr-5"
