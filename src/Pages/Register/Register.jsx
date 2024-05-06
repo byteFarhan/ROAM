@@ -30,7 +30,7 @@ const Register = () => {
   const onSubmit = (data) => {
     setSuccess("");
     setError("");
-    console.log(data);
+    // console.log(data);
     const { name, email, password, photoURL } = data;
 
     if (password.length < 6) {

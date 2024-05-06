@@ -9,7 +9,7 @@ const Countries = () => {
       .then((res) => res.json())
       .then((data) => setCountries(data));
   }, []);
-  console.log(countries);
+  // console.log(countries);
   return (
     <>
       <section className="py-16 md:py-24 dark:bg-[#202124]">
@@ -22,7 +22,7 @@ const Countries = () => {
           <div className="grid grid-cols-1 gap-6 px-5 lg:grid-cols-3 lg:gap-2 lg:px-0">
             {countries?.length > 0 &&
               countries.map((country, idx) => (
-                <Country key={idx} country={country} index={idx}/>
+                <Country key={idx} country={country} index={idx} />
               ))}
           </div>
         </div>

@@ -7,7 +7,7 @@ import swal from "sweetalert";
 
 const MyList = () => {
   const { user } = useAuth();
-  console.log(user?.email);
+  // console.log(user?.email);
   const [mySpots, setMySpots] = useState([]);
   const handleDelete = (id) => {
     swal({
@@ -31,12 +31,12 @@ const MyList = () => {
                 icon: "success",
               });
               const remainingSpots = mySpots.filter((spot) => spot._id !== id);
-              console.log(remainingSpots);
+              // console.log(remainingSpots);
               setMySpots(remainingSpots);
             }
           })
           .catch((error) => {
-            console.log(error);
+            // console.log(error);
             swal({
               text: error.message,
               icon: "error",

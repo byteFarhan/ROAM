@@ -39,7 +39,7 @@ const AddTouristsSpot = () => {
       userEmail: user?.email,
       userName: user?.displayName,
     };
-    console.log(touristSpot);
+    // console.log(touristSpot);
     fetch("https://roam-server-ten.vercel.app/tourist_spots", {
       method: "POST",
       headers: {

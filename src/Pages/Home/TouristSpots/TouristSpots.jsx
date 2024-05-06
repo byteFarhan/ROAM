@@ -7,11 +7,11 @@ import { Link } from "react-router-dom";
 const TouristSpots = () => {
   const [touristSpots, setTouristSpots] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/tourist_spots")
+    fetch("https://roam-server-ten.vercel.app/tourist_spots")
       .then((res) => res.json())
       .then((data) => setTouristSpots(data));
   }, []);
-  console.log(touristSpots);
+  // console.log(touristSpots);
   return (
     <section
       id="tourist-spot"

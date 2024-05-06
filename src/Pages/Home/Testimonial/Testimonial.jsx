@@ -13,7 +13,7 @@ const Testimonial = () => {
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
-  console.log(reviews);
+  // console.log(reviews);
   const sliderRef = useRef(null);
   //   console.log(sliderRef);
 
