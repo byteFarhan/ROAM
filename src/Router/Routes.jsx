@@ -9,6 +9,7 @@ import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import UpdateTouristSpot from "../Pages/UpdateTouristSpot/UpdateTouristSpot";
 import MyList from "../Pages/MyList/MyList";
+import CountrySpots from "../Pages/CountrySpots/CountrySpots";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,13 @@ const router = createBrowserRouter([
       //     return fetch(`http://localhost:5000/all_spots/${params.id}`);
       //   },
       // },
-
+      {
+        path: "/countries/:country",
+        element: <CountrySpots />,
+        loader: ({ params }) => {
+          return fetch(`http://localhost:5000/countries/${params.country}`);
+        },
+      },
       {
         path: "/add_spot",
         element: <AddTouristsSpot />,
