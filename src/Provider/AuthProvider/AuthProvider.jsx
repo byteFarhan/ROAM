@@ -50,7 +50,6 @@ const AuthProvider = ({ children }) => {
   }, []);
   const authInfo = {
     user,
-    userEmail: user?.email,
     setUser,
     loading,
     createUserWithEmail,

@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
 import { updateProfile } from "firebase/auth";
 import swal from "sweetalert";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 const Register = () => {
   const {
@@ -195,7 +196,7 @@ const Register = () => {
               </div>
             </form>
             <div className="px-5 pb-5">
-              {"```````````````````````````"}
+              <SocialLogin />
               <p className="my-3 text-center">
                 Already have an account?{" "}
                 <Link to={"/login"} className="text-pink-600 hover:underline">

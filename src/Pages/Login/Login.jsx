@@ -5,6 +5,7 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import swal from "sweetalert";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 const Login = () => {
   const { signInWithEmail } = useAuth();
@@ -106,7 +107,9 @@ const Login = () => {
                 </Link>
               </p>
             </form>
-            <div className="px-5 pb-5">{"````````````````"}</div>
+            <div className="px-5 pb-5">
+              <SocialLogin />
+            </div>
           </div>
         </div>
       </div>
