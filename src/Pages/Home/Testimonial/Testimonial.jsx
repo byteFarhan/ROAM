@@ -4,12 +4,12 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useRef, useState } from "react";
 import SectionIntro from "../../Shared/SectionIntro/SectionIntro";
 import TestimonialItem from "./TestimonialItem/TestimonialItem";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 const Testimonial = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/testimonial/")
+    fetch("https://roam-server-ten.vercel.app/testimonial/")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -73,13 +73,13 @@ const Testimonial = () => {
               onClick={prevSlide}
               className="p-3 md:p-5 bg-title rounded-full cursor-pointer hover:bg-primary *:hover:text-white transition-all duration-300 ease-in-out mr-5"
             >
-              <FaArrowLeft className="text-xl text-white md:text-2xl" />
+              <BsArrowLeft className="text-xl font-black text-white md:text-2xl" />
             </div>
             <div
               onClick={nextSlide}
               className="p-3 md:p-5 bg-title rounded-full cursor-pointer hover:bg-primary *:hover:text-white transition-all duration-300 ease-in-out ml-5"
             >
-              <FaArrowRight className="text-xl text-white md:text-2xl" />
+              <BsArrowRight className="text-xl font-black text-white md:text-2xl" />
             </div>
           </div>
 

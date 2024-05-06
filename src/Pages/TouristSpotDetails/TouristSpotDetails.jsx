@@ -6,6 +6,7 @@ import { RxCross2 } from "react-icons/rx";
 import { FaHeart } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import BannerB from "../Shared/BannerB/BannerB";
+import { Fade } from "react-awesome-reveal";
 
 const TouristSpotDetails = () => {
   const touristSpot = useLoaderData();
@@ -64,62 +65,64 @@ const TouristSpotDetails = () => {
             </p>
           </div>
           <div className="my-6">
-            <ul className="*:flex *:flex-col *:md:flex-row *:gap-3 *:md:gap-0  *:md:items-center *:p-6 *:border-t *:border-[#ebebeb]">
-              <li className="transition-all duration-100 hover:bg-gray">
-                <p className="text-lg font-bold text-title w-[40%]">
-                  Destination
-                </p>
-                <p className="capitalize">{touristsSpotName}</p>
-              </li>
-              <li className="transition-all duration-100 hover:bg-gray">
-                <p className="text-lg font-bold text-title md:w-[40%]">
-                  Departure Time
-                </p>
-                <p className="capitalize"> Approximately {departureTime}.</p>
-              </li>
-              <li className="transition-all duration-100 hover:bg-gray">
-                <p className="text-lg font-bold text-title md:w-[40%]">
-                  Departure Location
-                </p>
-                <p className="capitalize">{departure}</p>
-              </li>
-              <li className="transition-all duration-100 hover:bg-gray">
-                <p className="text-lg font-bold text-title md:w-[40%]">
-                  Dress Code
-                </p>
-                <p className="capitalize">{`Casual. Comfortable athletic clothing, hiking shoes, hat and warm jacket.`}</p>
-              </li>
-              <li className="transition-all duration-100 hover:bg-gray">
-                <p className="text-lg font-bold text-title md:w-[40%]">
-                  Included
-                </p>
-                <div className="flex flex-wrap gap-3 capitalize md:gap-5">
-                  {included?.map((item) => (
-                    <p key={item} className="flex gap-1.5 items-center">
-                      <span className="text-primary">
-                        <IoCheckmarkDoneOutline />
-                      </span>
-                      {item}
-                    </p>
-                  ))}
-                </div>
-              </li>
-              <li className="transition-all duration-100 border-b hover:bg-gray">
-                <p className="text-lg font-bold text-title md:w-[40%]">
-                  Not Included
-                </p>
-                <div className="flex flex-wrap gap-3 capitalize md:gap-5">
-                  {notIncluded?.map((item) => (
-                    <p key={item} className="flex gap-1.5 items-center">
-                      <span className="text-primary">
-                        <RxCross2 />
-                      </span>
-                      {item}
-                    </p>
-                  ))}
-                </div>
-              </li>
-            </ul>
+            <Fade cascade damping={0.2} triggerOnce={true}>
+              <ul className="*:flex *:flex-col *:md:flex-row *:gap-3 *:md:gap-0  *:md:items-center *:p-6 *:border-t *:border-[#ebebeb]">
+                <li className="transition-all duration-100 hover:bg-gray">
+                  <p className="text-lg font-bold text-title w-[40%]">
+                    Destination
+                  </p>
+                  <p className="capitalize">{touristsSpotName}</p>
+                </li>
+                <li className="transition-all duration-100 hover:bg-gray">
+                  <p className="text-lg font-bold text-title md:w-[40%]">
+                    Departure Time
+                  </p>
+                  <p className="capitalize"> Approximately {departureTime}.</p>
+                </li>
+                <li className="transition-all duration-100 hover:bg-gray">
+                  <p className="text-lg font-bold text-title md:w-[40%]">
+                    Departure Location
+                  </p>
+                  <p className="capitalize">{departure}</p>
+                </li>
+                <li className="transition-all duration-100 hover:bg-gray">
+                  <p className="text-lg font-bold text-title md:w-[40%]">
+                    Dress Code
+                  </p>
+                  <p className="capitalize">{`Casual. Comfortable athletic clothing, hiking shoes, hat and warm jacket.`}</p>
+                </li>
+                <li className="transition-all duration-100 hover:bg-gray">
+                  <p className="text-lg font-bold text-title md:w-[40%]">
+                    Included
+                  </p>
+                  <div className="flex flex-wrap gap-3 capitalize md:gap-5">
+                    {included?.map((item) => (
+                      <p key={item} className="flex gap-1.5 items-center">
+                        <span className="text-primary">
+                          <IoCheckmarkDoneOutline />
+                        </span>
+                        {item}
+                      </p>
+                    ))}
+                  </div>
+                </li>
+                <li className="transition-all duration-100 border-b hover:bg-gray">
+                  <p className="text-lg font-bold text-title md:w-[40%]">
+                    Not Included
+                  </p>
+                  <div className="flex flex-wrap gap-3 capitalize md:gap-5">
+                    {notIncluded?.map((item) => (
+                      <p key={item} className="flex gap-1.5 items-center">
+                        <span className="text-primary">
+                          <RxCross2 />
+                        </span>
+                        {item}
+                      </p>
+                    ))}
+                  </div>
+                </li>
+              </ul>
+            </Fade>
           </div>
         </div>
         <div className="lg:col-span-1-title">

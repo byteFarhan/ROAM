@@ -27,8 +27,12 @@ const TouristSpots = () => {
           {touristSpots?.length > 0 &&
             touristSpots
               ?.slice(0, 6)
-              .map((touristSpot) => (
-                <TouristSpot key={touristSpot._id} touristSpot={touristSpot} />
+              .map((touristSpot, index) => (
+                <TouristSpot
+                  key={touristSpot._id}
+                  touristSpot={touristSpot}
+                  index={index}
+                />
               ))}
         </div>
       </div>

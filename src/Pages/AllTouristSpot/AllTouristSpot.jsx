@@ -8,6 +8,7 @@ import { IoIosStarHalf } from "react-icons/io";
 import { FaSortAlphaDown } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import useSort from "../../hooks/useSort";
+import { Fade } from "react-awesome-reveal";
 
 const AllTouristSpot = () => {
   const touristSpots = useLoaderData();
@@ -85,11 +86,15 @@ const AllTouristSpot = () => {
         </ul>
       </section>
       <section className="grid gap-6 max-w-[1280px] mx-auto px-5 lg:px-0 my-24 lg:grid-cols-4">
-        <div className="flex flex-col gap-10 lg:col-span-3">
-          {touristSpots?.length &&
-            touristSpots?.map((spot) => (
-              <TouristSpotB key={spot._id} theSpot={spot} />
-            ))}
+        <div className="lg:col-span-3">
+          <div className="space-y-10">
+            <Fade cascade damping={0.1} triggerOnce={true}>
+              {touristSpots?.length > 0 &&
+                touristSpots?.map((spot) => (
+                  <TouristSpotB key={spot._id} theSpot={spot} />
+                ))}
+            </Fade>
+          </div>
         </div>
         <div className="lg:col-span-1">
           <div className="lg:h-[80vh]  border-title border-2 "></div>

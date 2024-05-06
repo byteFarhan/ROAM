@@ -18,7 +18,7 @@ const MyList = () => {
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-        fetch(`http://localhost:5000/tourist_spots/${id}`, {
+        fetch(`https://roam-server-ten.vercel.app/tourist_spots/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -51,7 +51,9 @@ const MyList = () => {
     if (!user) {
       return;
     }
-    fetch(`http://localhost:5000/tourist_spots?email=${user?.email}`)
+    fetch(
+      `https://roam-server-ten.vercel.app/tourist_spots?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setMySpots(data));
   }, [user]);

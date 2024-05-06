@@ -30,14 +30,16 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) => {
-          return fetch(`http://localhost:5000/tourist_spots/${params.id}`);
+          return fetch(
+            `https://roam-server-ten.vercel.app/tourist_spots/${params.id}`
+          );
         },
       },
       // {
       //   path: "/spots/:id",
       //   element: <TouristSpotDetails />,
       //   loader: ({ params }) => {
-      //     return fetch(`http://localhost:5000/all_spots/${params.id}`);
+      //     return fetch(`https://roam-server-ten.vercel.app/all_spots/${params.id}`);
       //   },
       // },
       {
@@ -48,7 +50,9 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) => {
-          return fetch(`http://localhost:5000/countries/${params.country}`);
+          return fetch(
+            `https://roam-server-ten.vercel.app/countries/${params.country}`
+          );
         },
       },
       {
@@ -67,7 +71,7 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
         // loader: ({ params }) => {
-        //   return fetch(`http://localhost:5000/tourist_spots/${params.email}`);
+        //   return fetch(`https://roam-server-ten.vercel.app/tourist_spots/${params.email}`);
         // },
       },
       {
@@ -78,13 +82,16 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) => {
-          return fetch(`http://localhost:5000/tourist_spots/${params.id}`);
+          return fetch(
+            `https://roam-server-ten.vercel.app/tourist_spots/${params.id}`
+          );
         },
       },
       {
         path: "/all_spots",
         element: <AllTouristSpot />,
-        loader: () => fetch("http://localhost:5000/tourist_spots/"),
+        loader: () =>
+          fetch("https://roam-server-ten.vercel.app/tourist_spots/"),
       },
       {
         path: "/register",

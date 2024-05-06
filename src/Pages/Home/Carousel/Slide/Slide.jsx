@@ -1,3 +1,5 @@
+import { Fade } from "react-awesome-reveal";
+
 const Slide = ({ slideImg, title, description }) => {
   return (
     <div className="">
@@ -14,14 +16,21 @@ const Slide = ({ slideImg, title, description }) => {
             {/* <h3 className="text-lg font-playfair-display lg:text-2xl">
                 {subTitle}
               </h3> */}
-            <h1 className="text-3xl md:text-4xl lg:text-[80px] font-bold text-white font-montserrat">
-              {title}
-            </h1>
+            <Fade direction="down" triggerOnce={true}>
+              <h1 className="text-3xl md:text-4xl lg:text-[80px] font-bold text-white font-montserrat">
+                {title}
+              </h1>
+            </Fade>
+
             {/* <hr className="h-1 mx-auto border-none rounded bg-primary w-28" /> */}
-            <p className="text-xl italic text-[#D9F1Fa] lg:text-3xl font-playfair-display font-semibold">
-              {description}
-            </p>
-            <button className="btn-base bg-primary">Spacial Offer</button>
+            <Fade triggerOnce={true}>
+              <p className="text-xl italic text-[#D9F1Fa] lg:text-3xl font-playfair-display font-semibold">
+                {description}
+              </p>
+            </Fade>
+            <Fade direction="up" triggerOnce={true}>
+              <button className="btn-base bg-primary">Spacial Offer</button>
+            </Fade>
           </div>
         </div>
       </div>

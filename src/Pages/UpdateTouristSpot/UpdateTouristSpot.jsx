@@ -34,7 +34,7 @@ const UpdateTouristSpot = () => {
       cost,
     };
     // console.log(updatedtouristSpot);
-    fetch(`http://localhost:5000/tourist_spots/${theSpot?._id}`, {
+    fetch(`https://roam-server-ten.vercel.app/tourist_spots/${theSpot?._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

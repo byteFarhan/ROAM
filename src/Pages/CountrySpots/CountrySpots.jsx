@@ -10,7 +10,9 @@ const CountrySpots = () => {
   console.log(params);
   const [countrySpots, setCountrySpots] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/tourist_spots?country=${params?.country}`)
+    fetch(
+      `https://roam-server-ten.vercel.app/tourist_spots?country=${params?.country}`
+    )
       .then((res) => res.json())
       .then((data) => setCountrySpots(data));
   }, [params]);
