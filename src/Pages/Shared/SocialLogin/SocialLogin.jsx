@@ -1,9 +1,10 @@
 import { FaGithub, FaGoogle } from "react-icons/fa6";
 import useAuth from "../../../hooks/useAuth";
 import swal from "sweetalert";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SocialLogin = () => {
+  const location = useLocation();
   const navigate = useNavigate();
   const { signInWithGoogle, signInWithGithub } = useAuth();
   // console.log(signInWithGithub, signInWithGoogle);

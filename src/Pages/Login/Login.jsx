@@ -2,14 +2,16 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import swal from "sweetalert";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 const Login = () => {
   const { signInWithEmail } = useAuth();
+  const location = useLocation();
   const navigate = useNavigate();
+  // console.log(location?.state);
   const {
     register,
     handleSubmit,

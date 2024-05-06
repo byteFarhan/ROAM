@@ -1,3 +1,4 @@
+import { Typewriter } from "react-simple-typewriter";
 import separator from "../../../assets/separator.png";
 
 const BannerB = ({ bannerTitle, bannerImage }) => {
@@ -8,7 +9,18 @@ const BannerB = ({ bannerTitle, bannerImage }) => {
     >
       <div className="">
         <h2 className="text-5xl lg:text-[90px] font-bold text-center text-white">
-          {bannerTitle}
+          {/* {bannerTitle} */}
+          <Typewriter
+            words={[bannerTitle]}
+            loop={3}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            // onLoopDone={handleDone}
+            // onType={handleType}
+          />
         </h2>
         <img src={separator} alt="" className="mx-auto" draggable="false" />
         {/* <div className="px-5 py-10">

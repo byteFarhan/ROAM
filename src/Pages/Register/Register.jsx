@@ -1,6 +1,6 @@
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { Helmet } from "react-helmet-async";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
@@ -9,6 +9,7 @@ import swal from "sweetalert";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 const Register = () => {
+  const location = useLocation();
   const {
     register,
     handleSubmit,
