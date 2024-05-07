@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import BannerB from "../Shared/BannerB/BannerB";
 import TouristSpot from "../Shared/TouristSpot/TouristSpot";
+import { Helmet } from "react-helmet-async";
 
 const CountrySpots = () => {
   const theCountry = useLoaderData();
@@ -19,6 +20,9 @@ const CountrySpots = () => {
   // console.log(countrySpots);
   return (
     <section>
+      <Helmet>
+        <title>ROAM | {theCountry?.countryName}</title>
+      </Helmet>
       <BannerB
         bannerTitle={theCountry?.countryName}
         bannerImage={theCountry?.image}

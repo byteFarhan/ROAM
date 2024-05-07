@@ -12,10 +12,7 @@ const Country = ({ country, index }) => {
         triggerOnce={true}
         direction="up"
       >
-        <Link
-          onClick={() => scrollTo(0, 0)}
-          to={`countries/${countryName.toLowerCase()}`}
-        >
+        <Link to={`countries/${countryName.toLowerCase()}`}>
           <div className="overflow-hidden cursor-pointer">
             <div
               style={{ backgroundImage: `url(${image})` }}
