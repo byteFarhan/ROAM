@@ -29,14 +29,22 @@ const ListTR = ({ spot, handleDelete }) => {
         <td>
           <div className="flex items-center gap-3">
             <div className="avatar">
-              <div className="size-16 md:size-24 mask">
-                <img src={image} alt={touristsSpotName} />
-              </div>
+              <Link to={`/tourist_spots/${_id}`}>
+                <div className="size-16 md:size-24 mask">
+                  <img
+                    src={image}
+                    alt={touristsSpotName}
+                    className="cursor-pointer"
+                  />
+                </div>
+              </Link>
             </div>
             <div>
-              <h5 className="text-xl font-bold text-title">
-                {touristsSpotName}
-              </h5>
+              <Link to={`/tourist_spots/${_id}`}>
+                <h5 className="text-xl font-bold text-title">
+                  {touristsSpotName}
+                </h5>
+              </Link>
             </div>
           </div>
         </td>
